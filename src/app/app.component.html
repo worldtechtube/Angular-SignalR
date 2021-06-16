@@ -1,0 +1,31 @@
+<ul>
+  <li class="active"><a routerLink="/home">Home</a></li>
+  <li *ngIf="!loggedInData">
+    <a routerLink="/login">Login</a>
+  </li>  
+  <!-- <li>
+    <a routerLink="/register">Register</a>
+  </li> -->
+  <!-- <li>
+    <a routerLink="/addNewCar">New Car</a>
+  </li> -->
+   <li *ngIf="loggedInData" (click)="logout()">
+    <a routerLink="/logout">Logout</a>
+  </li> 
+  <li>
+    <a routerLink="/fileupload">File Upload</a>
+  </li>  
+  <li>
+    <a routerLink="/student">Student</a>
+  </li>  
+  <li>
+    <a routerLink="/sendmessage">Send Message</a>
+  </li>
+  <li>
+    <a routerLink="/message">Messages</a>
+  </li>
+  <li>
+    <a routerLink="/testcomponent">Test Component</a>
+  </li>
+</ul>
+<router-outlet></router-outlet>

@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>New Car</h2>
+    <form [formGroup]="newCar">
+        <div class="form-group">
+            <label for="id">Id:</label>
+            <input type="text" formControlName="id" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" formControlName="name" class="form-control"/>
+        </div>
+        <div formGroupName="features">
+            <div class="form-group">
+                <label for="isAutomatic">Is Automatic:</label>
+                <input type="text" formControlName="isAutomatic" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="engine">Engine:</label>
+                <input type="text" formControlName="engine" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="milage">Milage:</label>
+                <input type="text" formControlName="milage" class="form-control"/>
+            </div>
+        </div>
+        <div formGroupName="model">
+            <div class="form-group">
+                <label for="modelNo">Model No:</label>
+                <input type="text" formControlName="modelNo" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="manufactureYear">Manufacture Year:</label>
+                <input type="text" formControlName="manufactureYear" class="form-control"/>
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn-primary">Add New Car</button>
+        </div>
+    </form>
+    <br>
+    <h3>New Car value:</h3>
+    <p>{{newCar.value | json }}</p>
+</div>

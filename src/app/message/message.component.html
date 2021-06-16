@@ -1,0 +1,9 @@
+<h1>Messages</h1>
+<p>This is the messages that is coming from server via signalR.</p>
+<div *ngIf="showimage">
+    Click on bell to show all {{signaldata.length}} messages <img src="assets/notification.png" height="30px" width="30px" (click)="showMessage()">
+</div>
+{{signaldata}}
+    <h2 *ngFor="let i of signaldata">
+        {{i.information}}
+    </h2>

@@ -1,0 +1,8 @@
+.invalid {
+    border-color:red;
+    border-width: .2em;
+}
+
+.nocontent{
+    display: none;
+}

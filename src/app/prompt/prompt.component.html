@@ -1,0 +1,13 @@
+<ng-template #field_required let-modal>  
+    <div class="card-header" style="background-color: lightgrey; color: black;">  
+      <h4>  
+        Error  
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">  
+        <span aria-hidden="true">×</span>  
+      </button>  
+      </h4>  
+    </div>  
+    <div class="modal-body" style="background-color: white; color: red;">  
+      <label>Required fields must be filled!</label>  
+    </div>  
+  </ng-template>
